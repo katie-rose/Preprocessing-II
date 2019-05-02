@@ -1,24 +1,35 @@
 // Navigation Styles here
 
-nav {
+.nav {
+  height: 75px;
+  border-bottom: 2px dashed @navigation-border;
+
+  .nav-all {
     display: flex;
-    justify-content: flex-end;
-    padding-top: 40px;
-    padding-bottom: 40px;
-    padding-left: 60px;
-    border-bottom: 3px dotted silver;
+    justify-content: space-between;
+    height: 100%;
+    align-items: center;
 
-    a {
-    color: black;
+    @media @mobile {
+      flex-direction: column;
+    }
+  }
+
+  ul {
+    display: flex;
+
+    @media @mobile {
+      margin-bottom: 10px;
+    }
+  }
+
+  li {
+    margin: 0 20px;
+    font-size: 1.6em;
+  }
+
+  a {
     text-decoration: none;
-    font-size: 20px;
-}
-}
-
-header {
-    border-bottom: 3px dotted silver;
-
-        .header-img {
-	width: 800px;
-}
+    color: black;
+  }
 }
